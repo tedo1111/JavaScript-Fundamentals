@@ -9,6 +9,6 @@ function printAndSum(start, end) {
     console.log(res);
     console.log(`Sum: ${sum}`);
 }
-// printAndSum(5, 10);
-// printAndSum(0, 26);
+printAndSum(5, 10);
+printAndSum(0, 26);
 printAndSum(50, 60);

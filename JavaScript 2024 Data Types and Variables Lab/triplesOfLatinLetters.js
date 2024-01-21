@@ -10,4 +10,4 @@ function triplesOfLatinLetters(n) {
     }
 }
 triplesOfLatinLetters(3);
-// triplesOfLatinLetters(2);
+triplesOfLatinLetters(2);

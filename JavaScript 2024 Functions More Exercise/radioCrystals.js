@@ -19,7 +19,7 @@ function radioCrystals(arr) {
 
         console.log(`Processing chunk ${curElOfArr} microns`);
 
-        while (targetThickness <= curElOfArr) {
+        while (targetThickness !== curElOfArr) {
 
 
             if (curElOfArr / 4 >= targetThickness) {
@@ -43,7 +43,7 @@ function radioCrystals(arr) {
                 curElOfArr = Math.floor(curElOfArr);
                 etch++;
             }
-            else if (curElOfArr >= targetThickness) {
+            else if (curElOfArr !== targetThickness) {
                 if (xRay < 1) {
                     curElOfArr += 1;
                     xRay++;

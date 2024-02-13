@@ -1,8 +1,11 @@
 function distinctArray(arr) {
 
-    let newArr = [...new Set(arr)];
 
-    console.log(newArr.join(" "));
+    let unique = arr.filter((num, index) => {
+        return arr.indexOf(num) === index;
+
+    });
+    console.log(unique.join(" "));
 
 }
 distinctArray([1, 2, 3, 4]);

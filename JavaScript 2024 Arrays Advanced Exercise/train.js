@@ -2,29 +2,29 @@ function train(arr) {
 
     let wagons = arr[0].split(" ").map(Number);
 
-    let capacity = Number(arr[1]);
+    let maxx = Number(arr[1]);
 
     for (let i = 2; i < arr.length; i++) {
+
         let command = arr[i];
 
-        let elements = command.split(" ");
+        let element = command.split(" ");
 
-        if (elements[0] === `Add`) {
-            let passangers = Number(elements[1]);
+        if (element[0] === 'Add') {
+            let passangers = Number(element[1]);
             wagons.push(passangers);
         }
         else {
-            let passangers = Number(elements[0]);
-
-
-            // for (let index = 0; index < wagons.length; index++) {
-            for (let index in wagons) {
-                if (wagons[index] + passangers <= capacity) {
-                    wagons[index] += passangers;
+            let passangers = Number(element[0]);
+            for (let i in wagons) {
+                if (wagons[i] + passangers <= maxx) {
+                    wagons[i] += passangers;
                     break;
                 }
             }
+
         }
+
     }
 
     console.log(wagons.join(" "));

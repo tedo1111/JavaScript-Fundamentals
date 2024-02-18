@@ -1,37 +1,39 @@
-function blackFlag(input) {
+function test(input) {
 
-    let days = Number(input[0]);
-    let daylyPlunder = Number(input[1]);
-    let expectedPlunder = Number(input[2]);
+    let days = Number(input.shift());
+    let daylyPlunder = Number(input.shift());
+    let expectedPlunder = Number(input.shift());
 
-
+    let dayCounter = 0;
     let total = 0;
-
-    for (let i = 1; i <= days; i++) {
-        // console.log(i);
+    for (let i = 0; i < days; i++) {
 
         total += daylyPlunder;
-
-        if (i % 3 === 0) {
-            total += daylyPlunder * 0.5;
+        dayCounter++;
+        if (dayCounter % 3 === 0) {
+            let additinal = daylyPlunder * 0.5;
+            total += additinal;
         }
 
-        if (i % 5 === 0) {
-            total -= total * 0.3;
+        if (dayCounter % 5 === 0) {
+            let lose = total * 0.3;
+            total -= lose;
         }
-
-
     }
 
     if (total >= expectedPlunder) {
         console.log(`Ahoy! ${total.toFixed(2)} plunder gained.`);
     }
     else {
-        let percLeft = total / expectedPlunder * 100;
-
-        console.log(`Collected only ${percLeft.toFixed(2)}% of the plunder.`);
+        let left = total / expectedPlunder * 100;
+        console.log(`Collected only ${left.toFixed(2)}% of the plunder.`);
     }
-
 }
-blackFlag((["5", "40", "100"]));
-blackFlag((["10", "20", "380"]));
+test((["5",
+    "40",
+    "100"])
+);
+test((["10",
+    "20",
+    "380"])
+);

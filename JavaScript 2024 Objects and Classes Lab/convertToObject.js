@@ -6,6 +6,12 @@ function convertToObject(obj) {
         console.log(`${key}: ${values}`);
     }
 
+    // let res = JSON.parse(obj);
+
+    // for (let el of Object.keys(res)) {
+    //     console.log(`${el}: ${res[el]}`);
+    // }
+
 }
 convertToObject('{"name": "George", "age": 40, "town": "Sofia"}');
 // convertToObject('{"name": "Peter", "age": 35, "town": "Plovdiv"}');

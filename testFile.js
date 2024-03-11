@@ -1,4 +1,4 @@
-function ex(products) {
+function testFile(products) {
 
     let listProducts = [];
 
@@ -28,7 +28,7 @@ function ex(products) {
     })
 
 }
-ex([
+testFile([
     'Appricot : 20.4',
     'Fridge : 1500',
     'TV : 1499',

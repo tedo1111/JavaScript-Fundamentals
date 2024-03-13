@@ -1,0 +1,4 @@
+function printCharacters() {
+
+}
+printCharacters('AWord');

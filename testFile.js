@@ -1,8 +1,7 @@
 function testFile(input) {
 
 
-}
-testFile(
 
-);
+}
+testFile();
 
